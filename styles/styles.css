@@ -1,0 +1,145 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+* {
+  font-family: Tahoma;
+}
+body{
+  background-image: url(images/desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50px 100px ;
+  grid-template-rows: 50px 50px;
+  gap: 70px;
+  grid-template-areas: 
+    'box1 boxtitle boxtitle'
+    'box2 boxtitle boxtitle';
+}
+
+.boxnav1{
+  grid-area: box1;
+  text-decoration: none;
+  margin-top: 30px;
+}
+.boxnav2{
+  grid-area: box2;
+  text-decoration: none;
+  margin-top: 30px;
+}
+.boxtitle{
+  grid-area: boxtitle;
+}
+.boxnav1 img, .boxnav2 img {
+  width: 50px;
+  height: 50px;
+}
+.boxnav1 figcaption, .boxnav2 figcaption {
+  color: #ffffff;
+  -webkit-text-stroke: 0.04em black;
+  text-shadow: black 1.5px 1.5px 1.5px;
+}
+
+#title {
+  background-image: url(images/titlewxp.png);
+  padding: auto;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  width:623px;
+  height: 170px;
+  text-align: center;
+  padding-top: 65px;
+  font-size: 50px;
+  margin-top: 50px;
+  margin-right: 200px;
+  margin-left:700px;
+}
+
+#taskbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#taskbar img {
+  width: 100vw;
+}
+
+#possiblehistory {
+  padding:10px;
+  background-color: #ff6f6f;
+  border-radius: 5px;
+}
+
+#error {
+  width: 400px;
+  height: 150px;
+  padding:10px;
+  background-image: url(images/errorwindow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 5px;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 18px;
+  font-family: Tahoma;
+  margin-left: 200px;
+}
+#error p {
+  font-family: Tahoma;
+  font-size: 15px;
+  margin-top: 5px;
+}
+#error a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 2px solid #000;
+  box-shadow: inset 1px 1px 1px #ffffff 
+            , inset -1px -1px 1px #000000;
+  text-decoration: none;
+  color: black;
+}
+#error a:hover {
+  background-color: #f3f3ef;
+  box-shadow: inset 1px 1px 1px rgb(96, 157, 255) 
+            , inset -1px -1px 1px rgb(96, 157, 255) ;
+}
+#likes {
+  background-image: url(images/windowbig.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1038px;
+  height: 430px;
+}
+#likes p {
+  font-family: Tahoma;
+  font-size: 25px;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+#likes ul {
+  font-family: Tahoma;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+#catwin {
+  
+}
+#bottom {
+  display:inline-flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  gap: 10vw;
+}

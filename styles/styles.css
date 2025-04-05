@@ -12,34 +12,26 @@ body{
   background-attachment: fixed;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 50px 100px ;
-  grid-template-rows: 50px 50px;
-  gap: 70px;
-  grid-template-areas: 
-    'box1 boxtitle boxtitle'
-    'box2 boxtitle boxtitle';
+.windows {
+  display: flex;
+  flex-direction:column;
 }
 
-.boxnav1{
-  grid-area: box1;
-  text-decoration: none;
+.navicons {
+  display: flex;
+  justify-content: start;
   margin-top: 30px;
 }
-.boxnav2{
-  grid-area: box2;
+
+.navicons a {
   text-decoration: none;
-  margin-top: 30px;
 }
-.boxtitle{
-  grid-area: boxtitle;
-}
+
 .boxnav1 img, .boxnav2 img {
   width: 50px;
   height: 50px;
 }
-.boxnav1 figcaption, .boxnav2 figcaption {
+.navicons figcaption, .navicons figcaption {
   color: #ffffff;
   -webkit-text-stroke: 0.04em black;
   text-shadow: black 1.5px 1.5px 1.5px;
@@ -52,12 +44,12 @@ body{
   background-size: auto auto;
   width:623px;
   height: 170px;
-  text-align: center;
-  padding-top: 65px;
   font-size: 50px;
-  margin-top: 50px;
-  margin-right: 200px;
-  margin-left:700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: left;;
+  padding-top: 10px;
 }
 
 #taskbar {
@@ -69,13 +61,9 @@ body{
 
 #taskbar img {
   width: 100vw;
+  min-width: 1300px;
 }
 
-#possiblehistory {
-  padding:10px;
-  background-color: #ff6f6f;
-  border-radius: 5px;
-}
 
 #error {
   width: 400px;
@@ -84,22 +72,20 @@ body{
   background-image: url(images/errorwindow.png);
   background-repeat: no-repeat;
   background-size: contain;
-  border-radius: 5px;
-  margin-top: -50px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   padding-top: 18px;
   font-family: Tahoma;
-  margin-left: 200px;
+  align-self: center;
 }
 #error p {
   font-family: Tahoma;
   font-size: 15px;
   margin-top: 5px;
 }
-#error a {
+.button {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 40px;
@@ -110,36 +96,51 @@ body{
   text-decoration: none;
   color: black;
 }
-#error a:hover {
+.button:hover {
   background-color: #f3f3ef;
   box-shadow: inset 1px 1px 1px rgb(96, 157, 255) 
             , inset -1px -1px 1px rgb(96, 157, 255) ;
 }
 #likes {
-  background-image: url(images/windowbig.png);
+  background-image: url(images/likeswindow.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 1038px;
-  height: 430px;
+  background-size: fill;
+  margin-top: 40px;
+  margin-right: 5%;
+  width: 713px; /* 713px */
+  height: 310px; /* 310px */
+  display: flex;
+  flex-direction: column;
 }
-#likes p {
+#likes h2 {
   font-family: Tahoma;
   font-size: 25px;
   margin-top: 50px;
-  margin-left: 30px;
+  text-align: center;
 }
 #likes ul {
   font-family: Tahoma;
   font-size: 20px;
   margin-top: 50px;
-  margin-left: 30px;
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
 }
-#catwin {
-  
+#likes .button { 
+  align-self: center;
+  justify-self: center;
+  margin-top: 50px;
 }
+
+#catwin{
+  width: 500px;
+  margin-right: 5%;
+  margin-bottom: 40px;
+}
+
 #bottom {
-  display:inline-flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  gap: 10vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
